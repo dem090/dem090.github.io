@@ -1,0 +1,1495 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f6f3e8">
+  <meta name="description"
+        content="Мария Смирнова — психолог. Психологическая помощь взрослым и парам.">
+  <title>Мария Смирнова — психолог</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400&family=Golos+Text:wght@400;500&display=swap"
+        rel="stylesheet">
+
+  <style>
+    :root {
+      color-scheme: light;
+      --page: #e7e8dc;
+      --cream: #f6f3e8;
+      --paper: #fbf8ef;
+      --green: #314b2a;
+      --green-dark: #243a21;
+      --ink: #293b2b;
+      --muted: #60675a;
+      --sand: #eed9b4;
+      --line: rgba(49, 75, 42, .19);
+      --line-light: rgba(246, 243, 232, .24);
+      --serif: "Cormorant Garamond", Georgia, "Times New Roman", serif;
+      --sans: "Golos Text", Arial, sans-serif;
+      --section-space: clamp(64px, 7.4vw, 104px);
+      --inside: clamp(40px, 4.8vw, 68px);
+      --radius: 30px;
+    }
+
+    *, *::before, *::after {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+      scroll-padding-top: 24px;
+    }
+
+    body {
+      margin: 0;
+      background: var(--page);
+      color: var(--ink);
+      font-family: var(--sans);
+      font-size: 18px;
+      font-weight: 400;
+      line-height: 1.7;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    ::selection {
+      background: #d4dec3;
+      color: var(--green-dark);
+    }
+
+    a {
+      color: inherit;
+      text-underline-offset: .25em;
+    }
+
+    button, input {
+      font: inherit;
+    }
+
+    button, a, input {
+      -webkit-tap-highlight-color: transparent;
+    }
+
+    a:focus-visible,
+    button:focus-visible,
+    input:focus-visible {
+      outline: 3px solid #a66b36;
+      outline-offset: 5px;
+    }
+
+    .approach a:focus-visible {
+      outline-color: var(--sand);
+    }
+
+    h1, h2, h3, p, figure {
+      margin: 0;
+    }
+
+    h1, h2 {
+      font-family: var(--serif);
+      font-weight: 400;
+    }
+
+    h1 {
+      max-width: 11em;
+      font-size: clamp(48px, 4.55vw, 65px);
+      line-height: 1.02;
+      letter-spacing: -.035em;
+      text-wrap: balance;
+    }
+
+    h2 {
+      font-size: clamp(44px, 4.7vw, 66px);
+      line-height: 1.07;
+      letter-spacing: -.025em;
+      text-wrap: balance;
+    }
+
+    h3 {
+      font-size: 20px;
+      line-height: 1.4;
+      font-weight: 500;
+    }
+
+    .site {
+      width: min(1280px, calc(100% - 80px));
+      margin: 32px auto;
+      overflow: clip;
+      border-radius: var(--radius);
+      background: var(--cream);
+    }
+
+    .section {
+      position: relative;
+      padding: var(--section-space) var(--inside);
+      scroll-margin-top: 24px;
+    }
+
+    .eyebrow {
+      font-size: 15px;
+      line-height: 1.5;
+      letter-spacing: .06em;
+    }
+
+    .button {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 14px;
+      min-height: 56px;
+      max-width: 100%;
+      padding: 15px 25px;
+      border: 1px solid transparent;
+      border-radius: 999px;
+      background: var(--green);
+      color: var(--paper);
+      font-size: 15px;
+      font-weight: 500;
+      line-height: 1.5;
+      text-align: center;
+      text-decoration: none;
+      cursor: pointer;
+      transition: background .18s ease, transform .18s ease;
+    }
+
+    .button:hover {
+      background: var(--green-dark);
+    }
+
+    .button:active {
+      transform: translateY(1px);
+    }
+
+    .button-light {
+      background: var(--cream);
+      color: var(--green-dark);
+    }
+
+    .button-light:hover {
+      background: #e5e9d6;
+    }
+
+    .arrow {
+      flex: 0 0 auto;
+      font-size: 20px;
+      line-height: 1;
+    }
+
+    .text-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 13px;
+      min-height: 44px;
+      font-size: 15px;
+      font-weight: 500;
+      text-decoration-thickness: 1px;
+    }
+
+    .text-link:hover {
+      text-decoration: none;
+    }
+
+    /* 01. Знакомство и направление */
+
+    .hero {
+      padding-top: 20px;
+      padding-bottom: 0;
+      background: var(--cream);
+    }
+
+    .header {
+      position: relative;
+      z-index: 2;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 24px;
+      min-height: 88px;
+      padding: 15px 26px;
+      border: 1px solid var(--line);
+      border-radius: 999px;
+      background: var(--paper);
+    }
+
+    .brand {
+      display: grid;
+      flex: 0 0 auto;
+      gap: 5px;
+      text-decoration: none;
+    }
+
+    .brand-name {
+      font-size: 21px;
+      font-weight: 500;
+      line-height: 1.3;
+    }
+
+    .brand-role {
+      color: var(--muted);
+      font-size: 15px;
+      line-height: 1.4;
+    }
+
+    .nav {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: flex-end;
+      gap: 5px 22px;
+      min-width: 0;
+    }
+
+    .nav a {
+      display: inline-flex;
+      align-items: center;
+      min-height: 44px;
+      font-size: 15px;
+      line-height: 1.4;
+      text-decoration: none;
+    }
+
+    .nav a:hover {
+      text-decoration: underline;
+    }
+
+    .hero-layout {
+      display: grid;
+      grid-template-columns: 1.08fr 1fr;
+      align-items: center;
+      gap: 24px;
+      min-height: 570px;
+    }
+
+    .hero-copy {
+      position: relative;
+      z-index: 1;
+      min-width: 0;
+      padding: 35px 0 40px;
+    }
+
+    .hero-description {
+      display: grid;
+      gap: 12px;
+      max-width: 32em;
+      margin-top: 23px;
+      color: var(--muted);
+      font-size: 17px;
+      line-height: 1.65;
+    }
+
+    .hero-actions {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 9px;
+      margin-top: 26px;
+    }
+
+    .portrait {
+      position: relative;
+      align-self: stretch;
+      min-width: 0;
+      min-height: 570px;
+      isolation: isolate;
+    }
+
+    .portrait::before {
+      position: absolute;
+      z-index: -1;
+      inset: 40px 0 0;
+      border-radius: 240px 240px 0 0;
+      background: #dbe0cb;
+      content: "";
+    }
+
+    .portrait img {
+      position: absolute;
+      inset: 0;
+      display: block;
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+      object-position: center bottom;
+      /*
+        Используется сама выбранная фотография.
+        CSS не меняет лицо, пропорции или геометрию изображения.
+        Выбирайте подготовленный портрет с прозрачным фоном.
+      */
+    }
+
+    /* Временные элементы подготовки.
+       Удаляются из экспортируемого HTML. */
+
+    .photo-setup {
+      position: absolute;
+      z-index: 3;
+      inset: 50px 16px 24px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      gap: 18px;
+      padding: 24px;
+      border: 1px solid var(--line);
+      border-radius: 24px;
+      background: var(--paper);
+      text-align: center;
+    }
+
+    .photo-setup p {
+      max-width: 27em;
+      color: var(--muted);
+      font-size: 14px;
+      line-height: 1.6;
+    }
+
+    .photo-setup .setup-title {
+      color: var(--ink);
+      font-size: 18px;
+      font-weight: 500;
+    }
+
+    .photo-setup input {
+      width: 100%;
+      max-width: 290px;
+      min-width: 0;
+      color: var(--ink);
+      font-size: 14px;
+    }
+
+    .photo-setup input::file-selector-button {
+      min-height: 44px;
+      margin: 0 10px 8px 0;
+      padding: 10px 14px;
+      border: 1px solid var(--line);
+      border-radius: 10px;
+      background: var(--cream);
+      color: var(--green-dark);
+      font: inherit;
+      cursor: pointer;
+    }
+
+    .photo-setup.has-photo {
+      inset: auto 12px 12px;
+      gap: 12px;
+      padding: 16px;
+      border-radius: 18px;
+      box-shadow: 0 5px 25px rgba(36, 58, 33, .08);
+    }
+
+    .photo-setup.has-photo .setup-title,
+    .photo-setup.has-photo .setup-help {
+      display: none;
+    }
+
+    .photo-setup.has-photo input {
+      max-width: 100%;
+    }
+
+    /* 02. С чем можно обратиться */
+
+    .situations {
+      background: var(--paper);
+    }
+
+    .section-intro {
+      max-width: 740px;
+      margin: 0 auto;
+      text-align: center;
+    }
+
+    .situations-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 36px;
+      margin-top: 46px;
+    }
+
+    .situation {
+      min-width: 0;
+      padding-top: 24px;
+      border-top: 1px solid var(--line);
+    }
+
+    .situation h3 {
+      min-height: 2.8em;
+      max-width: 15em;
+    }
+
+    .situation p {
+      margin-top: 16px;
+      color: var(--muted);
+      font-size: 17px;
+    }
+
+    .situations-bottom {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 24px;
+      margin-top: 38px;
+    }
+
+    .small-note {
+      color: var(--muted);
+      font-size: 14px;
+      line-height: 1.65;
+    }
+
+    /* 03. О психологе */
+
+    .about {
+      display: grid;
+      grid-template-columns: .65fr 1.35fr;
+      gap: clamp(36px, 5vw, 72px);
+      background: var(--cream);
+    }
+
+    .about-name,
+    .about-copy {
+      min-width: 0;
+    }
+
+    .about-name h2 {
+      max-width: 5em;
+      margin-top: 18px;
+    }
+
+    .about-copy {
+      padding-top: 5px;
+      font-size: 18px;
+      line-height: 1.8;
+    }
+
+    .about-copy p + p {
+      margin-top: 25px;
+    }
+
+    .about-copy .text-link {
+      margin-top: 27px;
+    }
+
+    /* 04. Подход и методы */
+
+    .approach {
+      border-radius: 76px 76px 0 0;
+      background: var(--green);
+      color: var(--cream);
+    }
+
+    .approach-heading {
+      display: grid;
+      grid-template-columns: 1.05fr 1fr;
+      align-items: start;
+      gap: 48px;
+    }
+
+    .approach-heading h2 {
+      max-width: 10em;
+    }
+
+    .approach-note {
+      position: relative;
+      min-width: 0;
+      margin-top: 7px;
+      padding-left: 22px;
+      border-left: 1px solid rgba(238, 217, 180, .55);
+      color: var(--sand);
+      font-size: 15px;
+      line-height: 1.75;
+    }
+
+    .approach-note::before {
+      position: absolute;
+      top: -2px;
+      left: -7px;
+      padding: 0 2px;
+      background: var(--green);
+      color: var(--sand);
+      font-family: var(--serif);
+      font-size: 24px;
+      line-height: 1;
+      content: "*";
+    }
+
+    .methods {
+      margin-top: 55px;
+      border-top: 1px solid var(--line-light);
+    }
+
+    .method {
+      display: grid;
+      grid-template-columns: .85fr 1.15fr;
+      gap: 40px;
+      padding: 27px 0;
+      border-bottom: 1px solid var(--line-light);
+    }
+
+    .method h3 {
+      min-width: 0;
+      max-width: 18em;
+      font-size: 18px;
+    }
+
+    .method p {
+      min-width: 0;
+      max-width: 39em;
+      color: #e0e5d6;
+      font-size: 17px;
+    }
+
+    .approach-bottom {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 32px;
+      margin-top: 34px;
+    }
+
+    .approach-bottom p {
+      max-width: 39em;
+      color: #e0e5d6;
+      font-size: 15px;
+    }
+
+    .approach-bottom .button {
+      flex-shrink: 0;
+    }
+
+    /* 05. Запись на консультацию */
+
+    .appointment {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      align-items: start;
+      gap: clamp(40px, 6vw, 88px);
+      background: var(--paper);
+    }
+
+    .appointment-copy,
+    .appointment-form {
+      min-width: 0;
+    }
+
+    .appointment-copy h2 {
+      max-width: 8em;
+    }
+
+    .appointment-intro {
+      max-width: 30em;
+      margin-top: 24px;
+      color: var(--muted);
+    }
+
+    .appointment-explanation {
+      margin-top: 38px;
+      padding-top: 24px;
+      border-top: 1px solid var(--line);
+    }
+
+    .appointment-explanation h3 {
+      font-size: 18px;
+    }
+
+    .appointment-explanation p {
+      margin-top: 10px;
+      color: var(--muted);
+      font-size: 16px;
+    }
+
+    .care-boundary {
+      margin-top: 24px;
+      color: var(--muted);
+      font-size: 14px;
+      line-height: 1.65;
+    }
+
+    .appointment-form {
+      display: grid;
+      gap: 25px;
+      padding-top: 7px;
+    }
+
+    .field {
+      display: grid;
+      gap: 8px;
+      min-width: 0;
+    }
+
+    .field label {
+      font-size: 16px;
+      font-weight: 500;
+    }
+
+    .field input {
+      width: 100%;
+      min-width: 0;
+      min-height: 56px;
+      padding: 12px 14px;
+      border: 1px solid #adb5a1;
+      border-radius: 8px;
+      background: transparent;
+      color: var(--ink);
+      font-size: 18px;
+    }
+
+    .field input:hover {
+      border-color: var(--green);
+    }
+
+    .field-help {
+      color: var(--muted);
+      font-size: 14px;
+      line-height: 1.5;
+    }
+
+    .form-submit {
+      display: grid;
+      gap: 14px;
+    }
+
+    .form-submit .button {
+      justify-self: start;
+    }
+
+    .demo-note {
+      padding-top: 17px;
+      border-top: 1px solid var(--line);
+      color: var(--muted);
+      font-size: 14px;
+    }
+
+    .form-status {
+      padding: 15px 17px;
+      border-radius: 10px;
+      background: #e8eddd;
+      color: var(--green-dark);
+      font-size: 15px;
+    }
+
+    [hidden] {
+      display: none !important;
+    }
+
+    @media (min-width: 1400px) {
+      .hero-layout, .portrait {
+        min-height: 620px;
+      }
+    }
+
+    @media (max-width: 1100px) {
+      :root {
+        --inside: 40px;
+      }
+
+      .site {
+        width: calc(100% - 48px);
+        margin: 24px auto;
+      }
+
+      .header {
+        gap: 20px;
+        padding: 15px 22px;
+        border-radius: 24px;
+      }
+
+      .brand-name {
+        font-size: 20px;
+      }
+
+      .nav {
+        gap: 2px 17px;
+      }
+
+      .nav a {
+        font-size: 14px;
+      }
+
+      .hero-layout {
+        gap: 20px;
+      }
+
+      h1 {
+        font-size: 50px;
+      }
+
+      .situations-grid {
+        gap: 25px;
+      }
+
+      .approach-heading {
+        gap: 30px;
+      }
+
+      .method {
+        grid-template-columns: .9fr 1.1fr;
+        gap: 30px;
+      }
+    }
+
+    @media (max-width: 860px) {
+      .header {
+        align-items: flex-start;
+      }
+
+      .nav {
+        max-width: 320px;
+      }
+
+      .hero-layout {
+        grid-template-columns: 1fr 1fr;
+      }
+
+      h1 {
+        font-size: 46px;
+      }
+
+      .hero-description {
+        font-size: 16px;
+      }
+
+      .hero .button {
+        padding-right: 18px;
+        padding-left: 18px;
+      }
+
+      .about {
+        grid-template-columns: .7fr 1.3fr;
+        gap: 32px;
+      }
+
+      .about-copy {
+        font-size: 17px;
+      }
+    }
+
+    @media (max-width: 760px) {
+      :root {
+        --inside: 24px;
+        --section-space: 64px;
+        --radius: 22px;
+      }
+
+      body {
+        font-size: 17px;
+      }
+
+      .site {
+        width: calc(100% - 24px);
+        margin: 12px auto;
+      }
+
+      .section {
+        scroll-margin-top: 12px;
+      }
+
+      h1 {
+        max-width: 12em;
+        font-size: clamp(45px, 7.5vw, 58px);
+      }
+
+      h2 {
+        font-size: clamp(43px, 7vw, 55px);
+      }
+
+      .hero {
+        padding-top: 16px;
+      }
+
+      .header {
+        display: block;
+        padding: 17px 18px 11px;
+        border-radius: 20px;
+      }
+
+      .brand {
+        width: fit-content;
+      }
+
+      .brand-name {
+        font-size: 22px;
+      }
+
+      .brand-role {
+        font-size: 16px;
+      }
+
+      .nav {
+        justify-content: flex-start;
+        gap: 0 19px;
+        max-width: none;
+        margin-top: 12px;
+      }
+
+      .nav a {
+        min-height: 44px;
+        font-size: 15px;
+      }
+
+      .hero-layout {
+        grid-template-columns: 1fr;
+        gap: 0;
+        min-height: auto;
+      }
+
+      .hero-copy {
+        padding: 36px 0 0;
+      }
+
+      .hero-description {
+        max-width: 35em;
+        margin-top: 21px;
+        font-size: 17px;
+      }
+
+      .hero-actions {
+        gap: 7px;
+        margin-top: 24px;
+      }
+
+      .portrait {
+        min-height: 0;
+        height: clamp(420px, 85vw, 560px);
+        margin-top: 24px;
+      }
+
+      .portrait::before {
+        inset: 28px 8% 0;
+      }
+
+      .section-intro {
+        text-align: left;
+      }
+
+      .situations-grid {
+        grid-template-columns: 1fr;
+        gap: 28px;
+        margin-top: 32px;
+      }
+
+      .situation {
+        padding-top: 20px;
+      }
+
+      .situation h3 {
+        min-height: 0;
+        max-width: none;
+      }
+
+      .situation p {
+        margin-top: 11px;
+      }
+
+      .situations-bottom {
+        display: block;
+        margin-top: 29px;
+      }
+
+      .situations-bottom .text-link {
+        margin-top: 14px;
+      }
+
+      .about {
+        grid-template-columns: 1fr;
+        gap: 27px;
+      }
+
+      .about-name h2 {
+        max-width: 9em;
+        margin-top: 14px;
+      }
+
+      .about-copy {
+        padding-top: 0;
+        font-size: 17px;
+        line-height: 1.8;
+      }
+
+      .approach {
+        border-radius: 44px 44px 0 0;
+      }
+
+      .approach-heading {
+        grid-template-columns: 1fr;
+        gap: 25px;
+      }
+
+      .approach-heading h2 {
+        max-width: 12em;
+      }
+
+      .approach-note {
+        margin-top: 0;
+        padding-left: 19px;
+      }
+
+      .methods {
+        margin-top: 35px;
+      }
+
+      .method {
+        grid-template-columns: 1fr;
+        gap: 12px;
+        padding: 24px 0;
+      }
+
+      .method h3 {
+        max-width: none;
+      }
+
+      .approach-bottom {
+        display: block;
+        margin-top: 27px;
+      }
+
+      .approach-bottom .button {
+        margin-top: 24px;
+      }
+
+      .appointment {
+        grid-template-columns: 1fr;
+        gap: 35px;
+      }
+
+      .appointment-copy h2 {
+        max-width: 10em;
+      }
+
+      .appointment-explanation {
+        margin-top: 26px;
+      }
+
+      .appointment-form {
+        padding-top: 0;
+      }
+    }
+
+    @media (max-width: 420px) {
+      :root {
+        --inside: 20px;
+      }
+
+      .site {
+        width: 100%;
+        margin: 0;
+        border-radius: 0;
+      }
+
+      .header {
+        padding: 17px 16px 10px;
+      }
+
+      .nav {
+        gap: 0 18px;
+      }
+
+      h1 {
+        font-size: 46px;
+      }
+
+      .hero-copy {
+        padding-top: 31px;
+      }
+
+      .button {
+        padding-right: 21px;
+        padding-left: 21px;
+      }
+
+      .portrait {
+        height: 430px;
+      }
+
+      .form-submit .button {
+        width: 100%;
+      }
+
+      .photo-setup {
+        right: 8px;
+        left: 8px;
+        padding: 20px;
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      html {
+        scroll-behavior: auto;
+      }
+
+      *, *::before, *::after {
+        transition: none !important;
+      }
+    }
+
+    @media print {
+      body {
+        background: white;
+      }
+
+      .site {
+        width: 100%;
+        margin: 0;
+        overflow: visible;
+      }
+
+      .section {
+        break-inside: avoid;
+      }
+
+      .approach {
+        background: white;
+        color: black;
+      }
+
+      .approach p,
+      .method p,
+      .approach-note {
+        color: black;
+      }
+
+      .approach-note {
+        border-color: #777;
+      }
+
+      .approach-note::before {
+        background: white;
+        color: black;
+      }
+
+      .photo-setup {
+        display: none;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <main class="site">
+
+    <!-- 01. Знакомство и направление -->
+    <section class="section hero" id="start" aria-labelledby="hero-title">
+      <header class="header">
+        <a class="brand" href="#start">
+          <span class="brand-name">Мария Смирнова</span>
+          <span class="brand-role">Психолог</span>
+        </a>
+
+        <nav class="nav" aria-label="Навигация по странице">
+          <a href="#situations">С чем можно обратиться</a>
+          <a href="#psychologist">Обо мне</a>
+          <a href="#approach">Подход</a>
+          <a href="#appointment">Запись</a>
+        </nav>
+      </header>
+
+      <div class="hero-layout">
+        <div class="hero-copy">
+          <h1 id="hero-title">Психологическая помощь взрослым и парам</h1>
+
+          <div class="hero-description">
+            <p>Когда трудно в отношениях, не хватает сил или непонятно, куда двигаться дальше.</p>
+            <p>Я помогаю разобраться в том, что происходит с вами, в том числе в период кризиса среднего возраста.</p>
+          </div>
+
+          <div class="hero-actions">
+            <a class="button" href="#appointment">
+              Записаться на консультацию
+              <span class="arrow" aria-hidden="true">↗</span>
+            </a>
+            <a class="text-link" href="#situations">
+              С чем можно обратиться
+              <span aria-hidden="true">↓</span>
+            </a>
+          </div>
+        </div>
+
+        <figure class="portrait">
+          <!--
+            Источник: предоставленная пользователем фотография.
+            После однократного выбора src содержит изображение целиком
+            в формате data:image/...;base64,...
+            Внешний адрес и отдельный файл не требуются.
+          -->
+          <img
+            id="maria-photo"
+            alt="Мария Смирнова, психолог"
+            width="1024"
+            height="1536"
+            fetchpriority="high"
+            decoding="async"
+            hidden
+          >
+
+          <!-- Временная панель. Удаляется из готового HTML. -->
+          <div class="photo-setup" id="photo-setup" data-editor-only>
+            <p class="setup-title">Фотография Марии</p>
+            <p class="setup-help">
+              Выберите подготовленный портрет без фона.
+              Затем сохраните HTML со встроенной фотографией.
+            </p>
+
+            <input
+              id="portrait-file"
+              type="file"
+              accept="image/png,image/jpeg,image/webp"
+              aria-label="Выбрать фотографию Марии"
+              aria-describedby="photo-status"
+            >
+
+            <button class="button" id="export-html" type="button" hidden>
+              Сохранить HTML с фотографией
+            </button>
+
+            <p id="photo-status" role="status" aria-live="polite">
+              Фотография обрабатывается только в вашем браузере.
+            </p>
+
+            <noscript>
+              Для однократного встраивания фотографии включите JavaScript.
+            </noscript>
+          </div>
+        </figure>
+      </div>
+    </section>
+
+    <!-- 02. С чем можно обратиться -->
+    <section class="section situations"
+             id="situations"
+             aria-labelledby="situations-title">
+      <div class="section-intro">
+        <h2 id="situations-title">Что сейчас даётся вам трудно?</h2>
+      </div>
+
+      <div class="situations-grid">
+        <article class="situation">
+          <h3>В отношениях</h3>
+          <p>Вы часто ссоритесь, отдалились друг от друга или не можете договориться о важном.</p>
+        </article>
+
+        <article class="situation">
+          <h3>Усталость и выгорание</h3>
+          <p>Сил становится меньше, привычные дела утомляют, а то, что раньше радовало, больше не приносит удовольствия.</p>
+        </article>
+
+        <article class="situation">
+          <h3>Кризис среднего возраста</h3>
+          <p>Вы пересматриваете свои цели и решения. Прежние ориентиры уже не подходят, а новые пока не появились.</p>
+        </article>
+      </div>
+
+      <div class="situations-bottom">
+        <p class="small-note">Это примеры поводов для обращения, а не тест или диагноз.</p>
+        <a class="text-link" href="#psychologist">
+          Обо мне
+          <span aria-hidden="true">↗</span>
+        </a>
+      </div>
+    </section>
+
+    <!-- 03. О психологе -->
+    <section class="section about"
+             id="psychologist"
+             aria-labelledby="psychologist-title">
+      <div class="about-name">
+        <p class="eyebrow">Обо мне</p>
+        <h2 id="psychologist-title">Мария Смирнова</h2>
+      </div>
+
+      <div class="about-copy">
+        <p>Меня зовут Мария Смирнова. Я психолог, закончила РУДН в Москве. В практике — 3 года; раньше работала в школе с детьми, и именно там особенно полюбила возрастную психологию. Сейчас консультирую в основном онлайн — так клиенту комфортнее. Работаю с парами и взрослыми в кризисе среднего возраста: помогаю успокоиться, разобраться в чувствах и понять, чего вы действительно хотите, чтобы жизнь снова ощущалась прекрасной.</p>
+
+        <p>В работе использую тесты, арт-терапию и психоанализ. Мой стиль — дружелюбное сопровождение, искренность и чистота: без давления и оценок, в вашем темпе. Однажды я просто обняла плачущую подругу и сказала: «Всё будет хорошо». Она до сих пор это помнит. Для меня это стало знаком, что мне суждено помогать людям. Эту фразу я часто повторяю клиентам — и верю в неё.</p>
+
+        <a class="text-link" href="#approach">
+          Как я работаю
+          <span aria-hidden="true">↗</span>
+        </a>
+      </div>
+    </section>
+
+    <!-- 04. Подход и методы -->
+    <section class="section approach"
+             id="approach"
+             aria-labelledby="approach-title">
+      <div class="approach-heading">
+        <h2 id="approach-title">Как я работаю</h2>
+
+        <aside class="approach-note" aria-label="Примечание о выборе методов">
+          <p>Мы обсуждаем, что вас беспокоит и с чем вы хотели бы разобраться. Я объясняю, какие методы предлагаю и зачем. Не все методы нужны в каждой ситуации.</p>
+        </aside>
+      </div>
+
+      <div class="methods">
+        <article class="method">
+          <h3>Психологическое консультирование</h3>
+          <p>В разговоре разбираем ваши переживания, отношения и трудности. Ищем возможные решения с учётом того, что важно для вас.</p>
+        </article>
+
+        <article class="method">
+          <h3>Психологические тесты</h3>
+          <p>Помогают уточнить отдельные особенности вашего состояния и переживаний. Результаты обсуждаем вместе: сами по себе они не являются диагнозом.</p>
+        </article>
+
+        <article class="method">
+          <h3>Арт-терапия</h3>
+          <p>Используем рисунки, образы и творческие материалы, чтобы исследовать чувства, которые трудно выразить словами. Уметь рисовать не нужно.</p>
+        </article>
+
+        <article class="method">
+          <h3>Психоанализ</h3>
+          <p>Исследуем повторяющиеся переживания и сценарии отношений, в том числе их связь с прошлым опытом.</p>
+        </article>
+      </div>
+
+      <div class="approach-bottom">
+        <p>Вы можете задавать вопросы и говорить, если предложенный способ работы вам не подходит.</p>
+        <a class="button button-light" href="#appointment">
+          Перейти к записи
+          <span class="arrow" aria-hidden="true">↗</span>
+        </a>
+      </div>
+    </section>
+
+    <!-- 05. Запись на консультацию -->
+    <section class="section appointment"
+             id="appointment"
+             aria-labelledby="appointment-title">
+      <div class="appointment-copy">
+        <h2 id="appointment-title">Записаться на консультацию</h2>
+
+        <p class="appointment-intro">Оставьте контакт для связи с Марией. Подробно описывать личную ситуацию в форме не нужно.</p>
+
+        <div class="appointment-explanation">
+          <h3>Если трудно подобрать слова</h3>
+          <p>Можно начать с того, что вас беспокоит сейчас. Заранее формулировать запрос не обязательно.</p>
+        </div>
+
+        <p class="care-boundary">Психологическое консультирование не заменяет медицинскую или психиатрическую помощь.</p>
+      </div>
+
+      <form class="appointment-form"
+            id="appointment-form"
+            aria-labelledby="appointment-title"
+            aria-describedby="demo-note">
+        <div class="field">
+          <label for="client-name">Как к вам обращаться</label>
+          <input id="client-name"
+                 type="text"
+                 autocomplete="off"
+                 aria-describedby="name-help">
+          <p class="field-help" id="name-help">Необязательно</p>
+        </div>
+
+        <div class="field">
+          <label for="client-contact">Контакт для ответа</label>
+          <input id="client-contact"
+                 type="text"
+                 autocomplete="off"
+                 aria-describedby="contact-help"
+                 aria-required="true">
+          <p class="field-help" id="contact-help">Укажите электронную почту или номер телефона.</p>
+        </div>
+
+        <div class="form-submit">
+          <button class="button"
+                  id="demo-submit"
+                  type="button"
+                  aria-describedby="demo-note">
+            Оставить заявку на консультацию
+          </button>
+          <p class="small-note">После отправки заявки время консультации нужно согласовать отдельно.</p>
+        </div>
+
+        <p class="demo-note" id="demo-note">Демонстрационная форма. Данные не отправляются.</p>
+
+        <p class="form-status"
+           id="form-status"
+           role="status"
+           aria-live="polite"
+           aria-atomic="true"
+           hidden>
+          Это демонстрация. Заявка не отправлена, запись не создана.
+        </p>
+
+        <template id="future-form-messages">
+          <p data-state="required">Укажите контакт для ответа.</p>
+          <p data-state="error">Не удалось отправить заявку. Попробуйте ещё раз позже.</p>
+          <p data-state="success">Заявка отправлена. Время консультации ещё нужно согласовать.</p>
+        </template>
+      </form>
+    </section>
+  </main>
+
+  <script>
+    (() => {
+      "use strict";
+
+      const form = document.getElementById("appointment-form");
+      const button = document.getElementById("demo-submit");
+      const status = document.getElementById("form-status");
+
+      function showDemoMessage() {
+        status.hidden = false;
+      }
+
+      button.addEventListener("click", showDemoMessage);
+
+      form.addEventListener("submit", (event) => {
+        event.preventDefault();
+        showDemoMessage();
+      });
+
+      form.addEventListener("keydown", (event) => {
+        if (event.key === "Enter" && event.target.matches("input")) {
+          event.preventDefault();
+          showDemoMessage();
+        }
+      });
+    })();
+  </script>
+
+  <!-- Временный редактор: удаляется при сохранении готового HTML. -->
+  <script data-editor-only>
+    (() => {
+      "use strict";
+
+      const photo = document.getElementById("maria-photo");
+      const panel = document.getElementById("photo-setup");
+      const input = document.getElementById("portrait-file");
+      const exportButton = document.getElementById("export-html");
+      const status = document.getElementById("photo-status");
+
+      let portraitReady = false;
+      let selectionNumber = 0;
+
+      function readAsDataURL(file) {
+        return new Promise((resolve, reject) => {
+          const reader = new FileReader();
+
+          reader.addEventListener("load", () => {
+            resolve(reader.result);
+          });
+
+          reader.addEventListener("error", () => {
+            reject(new Error("Не удалось прочитать файл."));
+          });
+
+          reader.readAsDataURL(file);
+        });
+      }
+
+      function inspectImage(source) {
+        return new Promise((resolve, reject) => {
+          const image = new Image();
+
+          image.onload = () => resolve({
+            width: image.naturalWidth,
+            height: image.naturalHeight
+          });
+
+          image.onerror = () => reject(
+            new Error("Не удалось открыть изображение.")
+          );
+
+          image.src = source;
+        });
+      }
+
+      input.addEventListener("change", async () => {
+        const file = input.files && input.files[0];
+        if (!file) return;
+
+        const currentSelection = ++selectionNumber;
+        const accepted = ["image/png", "image/jpeg", "image/webp"];
+
+        if (!accepted.includes(file.type)) {
+          status.textContent = "Выберите PNG, JPEG или WebP.";
+          return;
+        }
+
+        exportButton.disabled = true;
+        status.textContent = "Подготовка фотографии…";
+
+        try {
+          const source = await readAsDataURL(file);
+          const size = await inspectImage(source);
+
+          if (currentSelection !== selectionNumber) return;
+
+          /*
+            Сохраняются исходные данные файла.
+            Canvas, генерация и изменение пикселей лица не используются.
+          */
+          photo.src = source;
+          photo.width = size.width;
+          photo.height = size.height;
+          photo.hidden = false;
+
+          portraitReady = true;
+          panel.classList.add("has-photo");
+          exportButton.hidden = false;
+          exportButton.disabled = false;
+
+          status.textContent =
+            "Фотография добавлена. Сохраните готовый HTML.";
+        } catch (error) {
+          if (currentSelection !== selectionNumber) return;
+
+          exportButton.disabled = false;
+          status.textContent =
+            "Не удалось открыть файл. Выберите фотографию ещё раз.";
+        }
+      });
+
+      exportButton.addEventListener("click", () => {
+        if (!portraitReady) return;
+
+        const copy = document.documentElement.cloneNode(true);
+
+        copy.querySelectorAll("[data-editor-only]").forEach(
+          (element) => element.remove()
+        );
+
+        /*
+          Экспорт не включает введённые в демоформу контакты.
+        */
+        copy.querySelectorAll(
+          "#appointment-form input"
+        ).forEach((element) => {
+          element.value = "";
+          element.removeAttribute("value");
+        });
+
+        const savedStatus = copy.querySelector("#form-status");
+        if (savedStatus) savedStatus.hidden = true;
+
+        const savedPhoto = copy.querySelector("#maria-photo");
+        savedPhoto.removeAttribute("hidden");
+
+        const html = "<!DOCTYPE html>\n" + copy.outerHTML;
+
+        const blob = new Blob([html], {
+          type: "text/html;charset=utf-8"
+        });
+
+        const url = URL.createObjectURL(blob);
+        const link = document.createElement("a");
+
+        link.href = url;
+        link.download = "index.html";
+        document.body.appendChild(link);
+        link.click();
+        link.remove();
+
+        window.setTimeout(() => {
+          URL.revokeObjectURL(url);
+        }, 30000);
+
+        status.textContent =
+          "Готовый HTML сформирован. Откройте сохранённый index.html.";
+      });
+    })();
+  </script>
+</body>
+</html>
